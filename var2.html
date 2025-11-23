@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>square1</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .board {
+      width: min(100vw, 100vh);   
+      height: min(100vw, 100vh);  
+      margin: auto;               
+      font-size: 0;              
+    }
+
+    .cell {
+      display: inline-block;
+      width: 20%;         
+      aspect-ratio: 1 / 1;
+      text-align: center;
+      font-size: clamp(16px, 3vw, 120px);
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .cell::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .cell span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .cell:nth-child(odd) {
+      background: #2b6cb0;
+      color: #f6e05e;
+    }
+    .cell:nth-child(even) {
+      background: #f6e05e;
+      color: #2b6cb0;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="cell"><span>A</span></div><div class="cell"><span>B</span></div><div class="cell"><span>C</span></div><div class="cell"><span>D</span></div><div class="cell"><span>E</span></div>
+    <div class="cell"><span>F</span></div><div class="cell"><span>G</span></div><div class="cell"><span>H</span></div><div class="cell"><span>I</span></div><div class="cell"><span>J</span></div>
+    <div class="cell"><span>K</span></div><div class="cell"><span>L</span></div><div class="cell"><span>M</span></div><div class="cell"><span>N</span></div><div class="cell"><span>O</span></div>
+    <div class="cell"><span>P</span></div><div class="cell"><span>Q</span></div><div class="cell"><span>R</span></div><div class="cell"><span>S</span></div><div class="cell"><span>T</span></div>
+    <div class="cell"><span>U</span></div><div class="cell"><span>V</span></div><div class="cell"><span>W</span></div><div class="cell"><span>X</span></div><div class="cell"><span>Y</span></div>
+  </div>
+</body>
+</html>
