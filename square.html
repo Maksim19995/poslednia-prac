@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>spasi i sochrani</title>
   <style>
-    /*Адаптируем под весь экран 5 на 5 -сеточку*/
     html, body {
       margin: 0;
       padding: 0;
@@ -12,41 +11,56 @@
       width: 100%;
       overflow: hidden;
     }
-    /*бахаем на весь экран сожержимое */
+
     .board {
-      height: 100%;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
+      font-size: 0; 
     }
 
     .cell {
       display: inline-block;
-      width: 20%;  
+      width: 20%;         
+      aspect-ratio: 1 / 1; 
       text-align: center;
-      aspect-ratio: 1 / 1; /*делаем квадарты одного размера*/
-      line-height: calc(100vw / 5); 
-      font-size: calc(2vw + 2vh); /* Адаптимируесть для 4 K */
+      font-size: calc(2vw + 2vh);
+      line-height: 1; 
+      vertical-align: middle;
     }
 
-    /* чередовочка цеветов  */
+
     .cell:nth-child(odd) {
       background: #2b6cb0;
-      color:#f6e05e;;
+      color: #f6e05e;
     }
     .cell:nth-child(even) {
       background: #f6e05e;
-      color:#2b6cb0;
+      color: #2b6cb0;
+    }
+
+    .cell::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .cell span {
+      display: inline-block;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
   <div class="board">
-    <div class="cell">A</div><div class="cell">B</div><div class="cell">C</div><div class="cell">D</div><div class="cell">E</div>
-    <div class="cell">F</div><div class="cell">G</div><div class="cell">H</div><div class="cell">I</div><div class="cell">J</div>
-    <div class="cell">K</div><div class="cell">L</div><div class="cell">M</div><div class="cell">N</div><div class="cell">O</div>
-    <div class="cell">P</div><div class="cell">Q</div><div class="cell">R</div><div class="cell">S</div><div class="cell">T</div>
-    <div class="cell">U</div><div class="cell">V</div><div class="cell">W</div><div class="cell">X</div><div class="cell">Y</div>
+    <div class="cell"><span>A</span></div><div class="cell"><span>B</span></div><div class="cell"><span>C</span></div><div class="cell"><span>D</span></div><div class="cell"><span>E</span></div>
+    <div class="cell"><span>F</span></div><div class="cell"><span>G</span></div><div class="cell"><span>H</span></div><div class="cell"><span>I</span></div><div class="cell"><span>J</span></div>
+    <div class="cell"><span>K</span></div><div class="cell"><span>L</span></div><div class="cell"><span>M</span></div><div class="cell"><span>N</span></div><div class="cell"><span>O</span></div>
+    <div class="cell"><span>P</span></div><div class="cell"><span>Q</span></div><div class="cell"><span>R</span></div><div class="cell"><span>S</span></div><div class="cell"><span>T</span></div>
+    <div class="cell"><span>U</span></div><div class="cell"><span>V</span></div><div class="cell"><span>W</span></div><div class="cell"><span>X</span></div><div class="cell"><span>Y</span></div>
   </div>
 </body>
 </html>
+
+
 
 
